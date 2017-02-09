@@ -12,8 +12,8 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
+
 
 import com.example.yedaye.firsttv.R;
 
@@ -181,14 +181,14 @@ public class ConnectBoardView extends View {
             if (map[position.x][position.y] >= 1) {
                 canvas.drawBitmap(icons[map[position.x][position.y]],
                         null,
-                        new Rect(p.x - 5, p.y - 5, p.x + iconSize + 5, p.y + iconSize + 5), null);
+                        new Rect(p.x , p.y, p.x + iconSize , p.y + iconSize), null);
 
                 Paint paint = new Paint();
                 paint.setColor(Color.GREEN);
                 paint.setDither(true);
-                paint.setStrokeWidth(5);
+                paint.setStrokeWidth(2);
                 paint.setStyle(Paint.Style.STROKE);
-                canvas.drawRect(p.x - 5, p.y - 5, p.x + iconSize + 5, p.y + iconSize + 5, paint);
+                canvas.drawRect(p.x , p.y, p.x + iconSize , p.y + iconSize , paint);
             }
         }
 
@@ -196,9 +196,9 @@ public class ConnectBoardView extends View {
         Paint selectPaint = new Paint();
         selectPaint.setColor((Color.parseColor("#E2E2E2")));
         selectPaint.setDither(true);
-        selectPaint.setStrokeWidth(5);
+        selectPaint.setStrokeWidth(2);
         selectPaint.setStyle(Paint.Style.STROKE);
-        canvas.drawRect(selectP.x - 5, selectP.y - 5, selectP.x + iconSize + 5, selectP.y + iconSize + 5, selectPaint);
+        canvas.drawRect(selectP.x , selectP.y, selectP.x + iconSize , selectP.y + iconSize , selectPaint);
 
     }
 

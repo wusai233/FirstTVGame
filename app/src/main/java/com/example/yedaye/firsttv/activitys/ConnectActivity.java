@@ -115,12 +115,12 @@ public class ConnectActivity extends Activity implements View.OnClickListener, O
                 imgTitle.setVisibility(View.GONE);
                 gameView.setVisibility(View.VISIBLE);
 
-                btnRefresh.setVisibility(View.VISIBLE);
-                btnTip.setVisibility(View.VISIBLE);
+//                btnRefresh.setVisibility(View.VISIBLE);
+//                btnTip.setVisibility(View.VISIBLE);
                 progress.setVisibility(View.VISIBLE);
                 clock.setVisibility(View.VISIBLE);
-                textRefreshNum.setVisibility(View.VISIBLE);
-                textTipNum.setVisibility(View.VISIBLE);
+//                textRefreshNum.setVisibility(View.VISIBLE);
+//                textTipNum.setVisibility(View.VISIBLE);
 
                 btnRefresh.startAnimation(transIn);
                 btnTip.startAnimation(transIn);

@@ -17,6 +17,14 @@
     <uses-feature
         android:name="android.hardware.gamepad"
         android:required="false" />
+    <!-- 声明为电视机应用 -->
+    <uses-feature
+
+        android:name="android.hardware.type.television"
+        android:required="true">
+
+    </uses-feature>
+
 
     <application
         android:allowBackup="true"

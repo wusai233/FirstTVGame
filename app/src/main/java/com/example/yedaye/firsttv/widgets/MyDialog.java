@@ -7,12 +7,13 @@ import android.content.DialogInterface;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.yedaye.firsttv.R;
 import com.example.yedaye.firsttv.activitys.ConnectActivity;
 import com.example.yedaye.firsttv.connect.GameView;
-
+import com.example.yedaye.firsttv.control.BorderView;
 
 
 public class MyDialog extends Dialog implements OnClickListener {
@@ -25,6 +26,17 @@ public class MyDialog extends Dialog implements OnClickListener {
         this.gameview = gameview;
         this.context = context;
         this.setContentView(R.layout.dialog_view);
+
+        BorderView border = new BorderView(context);
+        border.setBackgroundResource(R.drawable.border_highlight);
+
+        LinearLayout menu_layout = (LinearLayout) findViewById(R.id.menu_layout);
+        border.attachTo(menu_layout);
+
+        for (int i = 0; i < menu_layout.getChildCount(); i++) {
+            menu_layout.getChildAt(i).setOnClickListener(this);
+        }
+
         TextView text_msg = (TextView) findViewById(R.id.text_message);
         TextView text_time = (TextView) findViewById(R.id.text_time);
         ImageButton btn_menu = (ImageButton) findViewById(R.id.menu_imgbtn);
@@ -38,7 +50,6 @@ public class MyDialog extends Dialog implements OnClickListener {
         btn_replay.setOnClickListener(this);
         this.setCancelable(false);
     }
-
 
 
     @Override
