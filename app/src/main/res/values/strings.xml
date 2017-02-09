@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">FirstGame</string>
+    <string name="connect_look">连连看</string>
+    <string name="game_me">我的</string>
+    <string name="game_help">帮助</string>
+
+    <string name="hello">Hello World, MainActivity!</string>
+    <string name="time">所用时间为：$秒</string>
+    <string name="quit">退出</string>
+    <string name="sure_quit">确定退出游戏？</string>
+    <string name="alert_dialog_ok">确定</string>
+    <string name="alert_dialog_cancel">取消</string>
+
+    <string name="mode_ready">Snake\nPress\nUp/Down\nTo Play in\nSOLID/WRAPPING\nmode</string>
+    <string name="mode_pause">Paused\nPress Up To Resume</string>
+    <string name="mode_lose_prefix">Game Over\nScore: </string>
+    <string name="mode_lose_suffix">\n\nPress\nUp/Down\nTo Play in\nSOLID/WRAPPING\nmode</string>
+</resources>
